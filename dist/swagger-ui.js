@@ -1288,6 +1288,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 				$('#input_apiKey').val(localStorage.getItem('apiKey'));
         window.authorizations.add("key", new ApiKeyAuthorization("api_key", localStorage.getItem('apiKey'), "query"));
         $('#input_apiKey').trigger('change');
+        $('#input_authKey').trigger('change');
 			}
       if (url.indexOf("http") !== 0) {
         url = this.buildUrl(window.location.href.toString(), url);
